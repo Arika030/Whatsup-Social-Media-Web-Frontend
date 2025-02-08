@@ -1,0 +1,12 @@
+
+
+.main-container {
+  display: flex;
+}
+
+.content {
+  margin-left: 15%; /* Adjust to the width of your navigation bar */
+  padding: 20px;
+  width: 85%; /* Fill the remaining width */
+}
+

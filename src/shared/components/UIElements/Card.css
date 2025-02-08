@@ -1,0 +1,22 @@
+.card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 12px;
+    background: white;
+    padding: 2rem;
+    width: 100%;
+    max-width: 700px; /* 扩大卡片最大宽度 */
+    height: auto; /* 自动调整高度 */
+    box-sizing: border-box;
+    transition: transform 0.2s ease-in-out;
+    margin: 0; /* No need for auto margin */
+
+    /* 新增内容布局 */
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.card:hover {
+    transform: scale(1.02);
+}

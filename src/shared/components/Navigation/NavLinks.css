@@ -1,0 +1,56 @@
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 使项目对齐到左侧 */
+    width: 100%; /* 导航栏内容宽度 */
+    box-sizing: border-box; /* 确保内边距不会让内容超出宽度 */
+}
+
+.nav-links li {
+    margin: 1rem 0;
+    width: 100%; /* 保证列表项占据整个导航栏宽度 */
+}
+
+.nav-links a,
+.nav-links button {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #333;
+    padding: 0.5rem 1.5rem; /* 保持按钮的内边距 */
+    border-radius: 25px;
+    background: #f8f8f8;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    width: 100%; /* 按钮宽度占满父容器 */
+    justify-content: flex-start; /* 使文本对齐到左侧 */
+    box-sizing: border-box; /* 包括 padding 在内计算宽度 */
+}
+
+.nav-links a:hover,
+.nav-links button:hover {
+    background: #e8e8e8; /* 悬停时背景色 */
+}
+
+.nav-links a.active,
+.nav-links button.active {
+    background: #ff385c; /* 变红效果 */
+    color: white; /* 文字颜色变白 */
+}
+
+.nav-links a:active,
+.nav-links button:active {
+    background: #ff385c; /* 点击时变红 */
+    color: white;
+}
+
+.nav-links button {
+    background: #ff385c; /* 默认按钮背景色 */
+    color: white;
+    outline: none;
+}

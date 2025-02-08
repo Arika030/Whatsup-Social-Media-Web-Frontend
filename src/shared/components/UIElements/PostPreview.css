@@ -1,0 +1,46 @@
+.post-prev {
+    flex: 1 1 300px; /* 自适应宽度 */
+    list-style: none;
+    margin: 1rem;
+}
+
+.post-prev__content {
+    padding: 0;
+    overflow: hidden;
+}
+
+.post-prev__image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.post-prev__title {
+    padding: 1rem;
+    background: #f8f8f8;
+}
+
+.post-prev__title h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.post-prev__creatorinfo {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem 1rem 1rem;
+}
+
+.post-prev__creatorinfo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.post-prev__creatorinfo h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: #666;
+}

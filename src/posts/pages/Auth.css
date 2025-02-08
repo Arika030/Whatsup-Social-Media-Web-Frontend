@@ -1,0 +1,29 @@
+/* Ensure that the auth container takes full viewport height */
+.auth {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    background-color: #f4f4f4; /* Background color to contrast with card */
+    padding: 1rem; /* Optional: Add padding around the container */
+    box-sizing: border-box; /* Ensure padding is included in height and width */
+}
+
+.card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 12px;
+    background: white;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px; /* Maintain maximum width */
+    height: auto; /* Let height adjust automatically */
+    max-height: 400px; /* Maintain maximum height */
+    box-sizing: border-box;
+    transition: transform 0.2s ease-in-out;
+    margin: 0; /* No need for auto margin */
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
