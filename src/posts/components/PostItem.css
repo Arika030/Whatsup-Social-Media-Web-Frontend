@@ -1,115 +1,231 @@
-
-
+/* Main post container */
 .post-item {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-}
-
-.post {
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    padding: 16px;
+    max-width: 900px; /* Ensures readability */
+    margin: 20px auto;
+    display: flex;
+    border-radius: 12px; /* Rounded corners for modern design */
     overflow: hidden;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Backdrop */
-.backdrop {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for subtle elevation */
+    background-color: #fff; /* White background for clean look */
+    position: relative;
+    flex-wrap: wrap;
+  }
+  
+  /* Modal content styling */
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .close-button {
+    font-size: 1.5rem;
+    color: #888;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  /* Post container */
+  .post-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Left side: Image */
+  .post-image {
+    width: 100%;
+    max-width: 450px; /* Max width for responsiveness */
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px; /* Rounded corners for image */
+    margin-bottom: 20px; /* Spacing between image and content */
+  }
+  
+  /* Right side: Post details */
+  .post-details {
+    width: 100%;
+    max-width: 450px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* User header */
+  .post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .post-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 12px;
+    background-color: #ddd;
+  }
+  
+  .post-info h3 {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  .post-info h2 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #555;
+    margin: 4px 0;
+  }
+  
+  /* Post title */
+  .post-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 12px;
+  }
+  
+  /* Post content text */
+  .post-text {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    flex-grow: 1;
+  }
+  
+  /* Post actions */
+  .post-actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 16px;
+  }
+  
+  .post-actions button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #888;
+    cursor: pointer;
+  }
+  
+  .post-actions button:hover {
+    color: #f00; /* Red color on hover */
+  }
+  
+  /* Comments section */
+  .comments {
+    margin-top: 16px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .comment p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  .comment button {
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .comment button:hover {
+    color: #f00; /* Red color on hover */
+  }
+  
+  /* Comment input section */
+  .comment-input {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+  }
+  
+  .comment-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px; /* Rounded input field */
+    font-size: 0.9rem;
+    margin-right: 12px;
+  }
+  
+  .comment-input button {
+    padding: 8px 12px;
+    background-color: #f00;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .comment-input button:hover {
+    background-color: #e60000; /* Slightly darker red on hover */
+  }
+  
+  /* Backdrop (for modals) */
+  .backdrop {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.75);
-    z-index: 10; /* Ensure backdrop is behind modal */
-}
-
-/* Modal */
-.modal {
+    z-index: 10;
+  }
+  
+  /* Modal container */
+  .modal {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
     padding: 20px;
-    width: 50%;
-    z-index: 20; /* Ensure modal is above backdrop */
-}
-
-.post-content {
-    display: flex;
-}
-
-.post-image {
-    width: 40%; /* Set width to 40% for the image */
-    height: auto;
-    object-fit: cover;
-}
-
-.post-details {
-    padding: 10px;
-    width: 60%; /* Set width to 60% for the text content */
-}
-
-.post-header {
-    display: flex;
-    align-items: center;
-}
-
-.post-avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.post-info h3 {
-    margin: 0;
-    font-size: 1.1rem;
-    color: #333;
-}
-
-.post-info h2 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #666;
-}
-
-.post-text {
-    padding: 10px 0;
-}
-
-.post-actions {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0;
-}
-
-.comments {
-    padding: 10px 0;
-    border-top: 1px solid #ddd;
-}
-
-.comment {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 0;
-}
-
-.comment-input {
-    display: flex;
-    align-items: center;
-    padding: 10px 0;
-}
-
-.comment-input input {
-    flex: 1;
-    padding: 5px;
-    margin-right: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
+    width: 80%;
+    max-width: 700px;
+    z-index: 20;
+    border-radius: 12px;
+    overflow-y: auto;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .post-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .post-image {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .post-details {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  
+  

@@ -15,11 +15,8 @@ const NewPost = () => {
             description: {
                 value: '',
                 isValid: false
-            },
-            address: {
-                value: '',
-                isValid: false
             }
+            
         },
         false
     );
